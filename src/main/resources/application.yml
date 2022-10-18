@@ -1,0 +1,14 @@
+server:
+  port: 8081
+spring:
+   datasource:
+     driver-class-name: org.postgresql.Driver
+     url: jdbc:postgresql://localhost:5432/payments
+     username: postgres
+     password: guluzada120912
+   liquibase:
+     change-log: classpath:liguibase/changelog-master.yml
+
+#client:
+#  ms-cards:
+#    endpoint:http://localhost:8082

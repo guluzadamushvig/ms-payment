@@ -1,0 +1,3 @@
+databaseChangeLog:
+  - includeAll:
+      path: liguibase/1.0
