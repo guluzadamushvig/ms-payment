@@ -25,7 +25,9 @@ public class PaymentService {
     public void savePayment(PaymentRequest paymentRequest) {
         log.info("ActionLog.SavePayment.Started");
         paymentRepository.save(PaymentRequestToPaymentEntity(paymentRequest));
+        log.info("ActionLog.CallMSCard.Started");
         cardClient.saveCardTransaction(PaymentRequestToCardsDto(paymentRequest));
+        log.info("ActionLog.CallMSCard.Finished");
         log.info("ActionLog.SavePayment.Finished");
     }
 
