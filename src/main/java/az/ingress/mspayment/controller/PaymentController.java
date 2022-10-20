@@ -16,7 +16,7 @@ public class PaymentController {
 
     private final PaymentService paymentService;
 
-    @PostMapping("/add")
+    @PostMapping()
     @ResponseStatus(HttpStatus.CREATED)
     public void savePayment(@RequestBody PaymentRequest paymentRequest){
             paymentService.savePayment(paymentRequest);
